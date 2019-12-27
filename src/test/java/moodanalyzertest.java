@@ -3,6 +3,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import java.lang.reflect.Constructor;
+
 public class moodanalyzertest {
     @Test
     public void whenGivensad_ShouldReturnSad() {
@@ -24,6 +26,16 @@ public class moodanalyzertest {
         String message = moodAnalyser.analyze("i'm Sad right now");
         Assert.assertEquals("sad",message);
     }
+
+//    @Test
+//    public void givenMoodAnalyserObject_WhenProper_ShouldReturnObject() {
+//        Constructor<?> constructor = Class.forName("moodAnalyser").getConstructor(String.class);
+//        try {
+//            Object myObject = constructor.newInstance("I'm in a happy mood");
+//        } catch (InstantiationException e){
+//            e.printStackTrace();
+//        } catch (I)
+//    }
 
     @Test
     public void whenGivenNull_ShouldReturnHappy() {
